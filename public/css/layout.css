@@ -1,8 +1,3 @@
-<<<<<<< Updated upstream
-body {
-    margin: 0;
-    background-color: #FFFFFF;
-=======
 @media screen and (min-width: 426px) {
     body {
       font-size: 16px; /* Adjust font size for larger screens */
@@ -26,7 +21,6 @@ body {
 body {
     margin: 0;
     background-color: #F9FFF8;
->>>>>>> Stashed changes
     color: #000000;
     font-family: "Lato", sans-serif;
 }
@@ -37,9 +31,6 @@ body {
 
 header {
     color: #87CEEB;
-<<<<<<< Updated upstream
-    text-align: center;
-=======
     text-align: center;    
     
 }
@@ -47,30 +38,15 @@ header {
 header h1{
     font-weight: 700;
     font-size: 35px;
->>>>>>> Stashed changes
 }
 
 h2 {
     margin: 0;
-<<<<<<< Updated upstream
-    padding-bottom: 1.5%;
-    font-size: 20px;
-=======
     font-size: 22px;
->>>>>>> Stashed changes
     font-weight: 800;
 }
 
 .subheader {
-<<<<<<< Updated upstream
-    color: #00000054;
-    font-weight: 600;
-    font-size: 15px;
-}
-
-
-
-=======
     color: #00000050;
     font-weight: 600;
     font-size: 16px;    
@@ -104,14 +80,11 @@ h2 {
     font-weight: 600;
     margin: 0;
 }
->>>>>>> Stashed changes
 
 footer {
     margin-top: 15%;
     text-align: center;   
     font-weight: bold; 
-<<<<<<< Updated upstream
-=======
 }
 
 .menu-bar {
@@ -130,5 +103,4 @@ footer {
     margin: 0 auto;
     width: 25px;
     height: auto;
->>>>>>> Stashed changes
 }
