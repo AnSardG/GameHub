@@ -1,6 +1,32 @@
+<<<<<<< Updated upstream
 body {
     margin: 0;
     background-color: #FFFFFF;
+=======
+@media screen and (min-width: 426px) {
+    body {
+      font-size: 16px; /* Adjust font size for larger screens */
+    }
+  
+    .game-card {
+      width: calc(33.33% - 20px); /* Adjust width for larger screens */
+      margin-right: 20px; /* Add margin between game cards */
+    }
+  
+    .game-card:last-child {
+      margin-right: 0; /* Remove margin from last game card in a row */
+    }
+  
+    .game-card img {
+      width: 100%; /* Make game card images fill the container */
+      height: auto; /* Maintain aspect ratio */
+    }
+}
+
+body {
+    margin: 0;
+    background-color: #F9FFF8;
+>>>>>>> Stashed changes
     color: #000000;
     font-family: "Lato", sans-serif;
 }
@@ -11,17 +37,32 @@ body {
 
 header {
     color: #87CEEB;
+<<<<<<< Updated upstream
     text-align: center;
+=======
+    text-align: center;    
+    
+}
+
+header h1{
+    font-weight: 700;
+    font-size: 35px;
+>>>>>>> Stashed changes
 }
 
 h2 {
     margin: 0;
+<<<<<<< Updated upstream
     padding-bottom: 1.5%;
     font-size: 20px;
+=======
+    font-size: 22px;
+>>>>>>> Stashed changes
     font-weight: 800;
 }
 
 .subheader {
+<<<<<<< Updated upstream
     color: #00000054;
     font-weight: 600;
     font-size: 15px;
@@ -29,9 +70,65 @@ h2 {
 
 
 
+=======
+    color: #00000050;
+    font-weight: 600;
+    font-size: 16px;    
+}
+
+.catalogue {
+    margin-top: 15px;
+}
+
+.game-card {
+    margin-bottom: 20px;   
+    width: 100%; 
+  }
+
+  .game-card img {
+    width: 110%;
+    height: 110%;
+    margin-bottom: 2px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+
+.game-details p {
+  color: #00000050;
+  font-size: 14px; 
+}
+
+.game-details h5 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+}
+>>>>>>> Stashed changes
 
 footer {
     margin-top: 15%;
     text-align: center;   
     font-weight: bold; 
+<<<<<<< Updated upstream
+=======
+}
+
+.menu-bar {
+    background-color: #F9FFF8;
+    color: #000000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    border-top: 1px solid #ccc;
+}
+
+.menu-bar img {
+    display: block;
+    margin: 0 auto;
+    width: 25px;
+    height: auto;
+>>>>>>> Stashed changes
 }
