@@ -1,10 +1,14 @@
 <?php
+if(!defined('CLIENT_ID')){
+  require('../../../config/api_config.php');
+}
+
 $page = isset($_POST['page']) ? $_POST['page'] : 1;
 $limit = 15;
 $apiUrl = 'https://api.igdb.com/v4/games';
 $headers = [
-  'Client-ID: ' . 'YOUR_CLIENT_ID',
-  'Authorization: ' . 'YOUR_ACCESS_TOKEN',
+  'Client-ID: ' . constant('CLIENT_ID'),
+  'Authorization: ' . constant('ACCESS_TOKEN'),
 ];
 $queryParams = [
   'fields' => 'name, platforms.name, cover.url',
