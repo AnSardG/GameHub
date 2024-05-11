@@ -1,0 +1,90 @@
+/* GENERAL */
+.form-group {
+    margin-bottom: 6%;
+}
+
+header h1 {
+    font-size: 44px;
+    margin-top: 24%;
+    margin-bottom:20%;
+}
+
+.sign-up-btn {
+    margin-top: 13%;
+    margin-bottom: 10%;
+    width: 100%;
+    font-weight: 600;
+    background-color: #87CEEB;
+    border-color: #87CEEB;
+    color: #000000;
+}
+
+.form-group input {
+    background-color: #F9FFF8;
+}
+
+.sign-up-btn:hover {
+    background-color: #6eb4d1;
+    border-color: #6eb4d1;
+}
+
+footer {
+    margin: 0;
+    font-size: 13px;
+}
+
+/* REGISTER */
+
+.register-form h2 {
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+.register-form h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10%;
+}
+
+.terms p {
+    font-size: 13px;
+    margin: 0;
+    color: #828282;
+    text-align: center;
+}
+
+.terms a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* LOGIN */
+
+.login-header h1{
+    font-size: 56px;
+    margin-top: 30%;
+    margin-bottom: 28%;
+}
+
+.login-form h2{
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 15%;
+}
+
+.register {
+    margin-bottom: 15%;
+}
+
+.register p {
+    font-size: 13px;
+    margin: 0;
+    color: #828282;
+    text-align: center;
+}
+
+.register a {
+    text-decoration: none;
+    color: #000000;
+}

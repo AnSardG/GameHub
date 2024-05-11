@@ -1,12 +1,15 @@
 <?php
-$data = array();
-$_POST['current_page'] = 'login';
+$_SESSION['current_page'] = 'login';
 
-if(isset($_POST['sent'])) {
+if(isset($_POST['register-sent'])) {
     output_data_to_js($_POST['user'], $_POST['email'], $_POST['pass'], $_POST['pass-repeat']);
+} else if (isset($_POST['login-sent'])) {
+
 }
 
-if (isset($_SESSION['registered']) && $_SESSION['registered']) {     
+$data = array();
+
+if ((isset($_SESSION['registered']) && $_SESSION['registered']) || isset($_GET['success'])) {     
     $data['title'] = $title['login'];
     $data['header'] = $header['login'];
     $data['body'] = $body['login'];

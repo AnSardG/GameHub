@@ -19,13 +19,13 @@
                             <input type="password" class="form-control" name="pass-repeat" id="pass-repeat" placeholder="Repeat password" required>            
                         </div>
                         <div class="text-center">
-                            <input type="submit" class="btn btn-primary" value="Sign up">
+                            <input type="submit" class="btn btn-primary sign-up-btn" value="Sign up">
                         </div>
-                        <input type="hidden" name="sent">
+                        <input type="hidden" name="register-sent">
                     </form>        
                 </div>
                 <div class="terms">
-                    <p>By clicking continue, you agree to our <a href="">Terms of Service</a> and <a href="">Privacy Policy</a></p>
+                    <p>Do you have an account already? <b><a href="<?php $_SESSION['registered'] = true; $_SESSION['login'] = false;?>">Jump in here!</a></b></p>
                 </div>
             </div>
         </div>
