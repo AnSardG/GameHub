@@ -23,6 +23,10 @@ header h1 {
     background-color: #F9FFF8;
 }
 
+.form-group.has-error input {
+    border: 1px solid red;
+}
+
 .sign-up-btn:hover {
     background-color: #6eb4d1;
     border-color: #6eb4d1;

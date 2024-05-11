@@ -7,15 +7,18 @@ $(document).ready(function() {
         };
         
         let valid = true;
+        $('.form-group').removeClass('has-error');
         
         if (formData.user.length < 3 || formData.user.length > 30) {
             console.log("Username must be between 3 and 30 characters");
             valid = false;
+            $('#user').closest('.form-group').addClass('has-error');
         }
                 
         if (formData.pass.length < 4 || formData.pass.length > 40) {
             console.log("Password must be between 4 and 40 characters");
             valid = false;
+            $('#pass').closest('.form-group').addClass('has-error');
         }                
         
         $.ajax({
