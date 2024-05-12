@@ -11,7 +11,7 @@ if ($response['success']) {
     foreach ($formData as $key => $value) {
         $value = strip_tags($value);
     }
-
+    
     $_SESSION['register_data'] = $formData;
 }
 

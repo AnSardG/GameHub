@@ -37,7 +37,7 @@ foreach ($games as $game) {
   }
   $game_row .= '
     <div class="col-4">
-      <div class="game-card">
+      <div class="game-card" onclick="viewGameDetails(' . $game['id'] . ')">
         <img src="' . $imageUrl . '" alt="' . $game['name'] . '">
         <div class="game-details">
           <h5 class="text-truncate">' . $game['name'] . '</h5>
@@ -55,3 +55,10 @@ foreach ($games as $game) {
   }
 }
 ?>
+
+<script>
+  function viewGameDetails(gameId) {  
+    window.location.href = 'index.php?game=' + gameId;
+  }
+</script>
+</script>

@@ -38,19 +38,21 @@ $(document).ready(function() {
             $('#pass-repeat-error').text("Passwords do not match").show();
         }
         
-        $.ajax({
-            url: '../app/views/register/validate.php',
-            method: 'POST',
-            data: { valid: valid, formData: formData },
-            success: function(response) {
-                if(response.success == 'true') {
-                    window.location.href = '../public/index.php?register=true';   
+        if(valid) {
+            $.ajax({
+                url: '../app/views/register/validate.php',
+                method: 'POST',
+                data: { valid: valid, formData: formData },
+                success: function(response) {
+                    if(response.success == 'true') {
+                        window.location.href = '../public/index.php?register=true';   
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error sending validation result to PHP:', error);
                 }
-            },
-            error: function(xhr, status, error) {
-                console.error('Error sending validation result to PHP:', error);
-            }
-        });
+            });
+        }        
     });
 });
 

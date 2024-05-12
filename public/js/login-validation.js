@@ -23,20 +23,22 @@ $(document).ready(function() {
             $('#pass').closest('.form-group').addClass('has-error');
             $('#pass-error').text("Password must be between 4 and 40 characters").show();
         }                
-        console.log(valid);
-        $.ajax({
-            url: '../app/views/login/validate.php',
-            method: 'POST',
-            data: { valid: valid, formData: formData },
-            success: function(response) {
-                if(response.success == 'true') {
-                    window.location.href = '../public/index.php?login=true';   
+        
+        if(valid) {
+            $.ajax({
+                url: '../app/views/login/validate.php',
+                method: 'POST',
+                data: { valid: valid, formData: formData },
+                success: function(response) {
+                    if(response.success == 'true') {
+                        window.location.href = '../public/index.php?login=true';   
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error sending validation result to PHP:', error);
                 }
-            },
-            error: function(xhr, status, error) {
-                console.error('Error sending validation result to PHP:', error);
-            }
-        });
+            });
+        }        
     });
 });
 
