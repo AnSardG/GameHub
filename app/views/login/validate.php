@@ -4,14 +4,16 @@ session_start();
 
 $response = array();
 
-$_SESSION['current_page'] = 'login';
-$_SESSION['login'] = $_POST['valid'];    
+$_SESSION['current_page'] = 'login';   
 $response['success'] = $_POST['valid'];
 
 if ($response['success']) {    
-    
-} else {
-    
+    $formData = $_POST['formData'];
+    foreach ($formData as $key => $value) {
+        $value = strip_tags($value);
+    }
+
+    $_SESSION['login_data'] = $formData;
 }
 
 header('Content-Type: application/json');

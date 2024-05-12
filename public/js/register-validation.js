@@ -11,30 +11,31 @@ $(document).ready(function() {
         let valid = true;
 
         $('.form-group').removeClass('has-error');
+        $('.error-message').hide();
         
         if (formData.user.length < 3 || formData.user.length > 30) {
-            console.log("Username must be between 3 and 30 characters");
             valid = false;
             $('#user').closest('.form-group').addClass('has-error');
+            $('#user-error').text("Username must be between 3 and 30 characters").show();
         }
         
         var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(formData.email)) {
-            console.log("Invalid email format");
             valid = false;
             $('#email').closest('.form-group').addClass('has-error');
+            $('#email-error').text("Invalid email format").show();
         }
         
         if (formData.pass.length < 4 || formData.pass.length > 40) {
-            console.log("Password must be between 4 and 40 characters");
             valid = false;
             $('#pass').closest('.form-group').addClass('has-error');
+            $('#pass-error').text("Password must be between 4 and 40 characters").show();
         }
         
         if (formData.pass !== formData.pass_repeat) {
-            console.log("Passwords do not match");
             valid = false;
             $('#pass-repeat').closest('.form-group').addClass('has-error');
+            $('#pass-repeat-error').text("Passwords do not match").show();
         }
         
         $.ajax({
@@ -42,11 +43,8 @@ $(document).ready(function() {
             method: 'POST',
             data: { valid: valid, formData: formData },
             success: function(response) {
-                console.log(response.success);
                 if(response.success == 'true') {
-                    window.location.href = '../public/index.php?success=true';   
-                } else {
-                    console.log('Validation failed');
+                    window.location.href = '../public/index.php?register=true';   
                 }
             },
             error: function(xhr, status, error) {

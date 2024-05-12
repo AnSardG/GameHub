@@ -27,6 +27,11 @@ header h1 {
     border: 1px solid red;
 }
 
+.error-message {
+    font-size: 12px;
+    color: red;
+}
+
 .sign-up-btn:hover {
     background-color: #6eb4d1;
     border-color: #6eb4d1;

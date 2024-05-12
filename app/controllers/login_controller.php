@@ -3,13 +3,18 @@ $_SESSION['current_page'] = 'login';
 
 if(isset($_POST['register-sent'])) {
     output_data_to_js($_POST['user'], $_POST['email'], $_POST['pass'], $_POST['pass-repeat']);
-} else if (isset($_POST['login-sent'])) {
-
 }
 
 $data = array();
 
-if ((isset($_SESSION['registered']) && $_SESSION['registered']) || isset($_GET['success'])) {     
+if (isset($_GET['login']) || isset($login_failed) || isset($_POST['login-sent'])) {  
+
+    if(isset($_SESSION['register_data']) && $_SESSION['register_data'] != null) {
+        if(is_registered($_SESSION['register_data']['user'])) {
+            add_user($_SESSION['register_data']['user'], $_SESSION['register_data']['email'], $_SESSION['register_data']['pass']);
+        }
+    }
+
     $data['title'] = $title['login'];
     $data['header'] = $header['login'];
     $data['body'] = $body['login'];

@@ -1,17 +1,18 @@
 <?php
-require('../../../config/model_config.php');
 session_start();
 
 $response = array();
 
 $_SESSION['current_page'] = 'register';
-$_SESSION['registered'] = $_POST['valid'];    
 $response['success'] = $_POST['valid'];
 
 if ($response['success']) {    
-    
-} else {
-    
+    $formData = $_POST['formData'];
+    foreach ($formData as $key => $value) {
+        $value = strip_tags($value);
+    }
+
+    $_SESSION['register_data'] = $formData;
 }
 
 header('Content-Type: application/json');
