@@ -1,8 +1,9 @@
-<div class="container">    
-    <nav class="navbar">
-        <a class="navbar-brand" href="index.php">
-            <img src="img/back_arrow_icon.png" width="30" height="30" class="d-inline-block align-top" alt="Back to home">
-            <span>Details</span>
-        </a>            
-    </nav>
+<div class="container mb-3 py-3 border-bottom">
+
+    <div class="text-center text-dark d-block w-100 position-relative">
+        <span>Details</span>
+        <a class="position-absolute top-0 start-0 px-2" href="index.php">
+            <i class="fa-solid fa-chevron-left text-dark"></i>
+        </a>
+    </div>
 </div>

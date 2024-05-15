@@ -31,7 +31,8 @@ $games = json_decode($response, true);
 $i = 0;
 foreach ($games as $game) {
   $platforms = isset($game['platforms']) ? implode(', ', array_column($game['platforms'], 'name')) : 'N/A';
-  $imageUrl = isset($game['cover']) ? 'https:' . $game['cover']['url'] : 'img/placeholder.jpg';
+  $image = str_replace("t_thumb", "t_cover_big", $game['cover']['url']);
+  $imageUrl = isset($game['cover']) ? 'https:' . $image : 'img/placeholder.jpg';
   if ($i == 0) {
     $game_row = '<div class="row">';
   }
