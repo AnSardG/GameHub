@@ -5,7 +5,7 @@
                 <div class="register-form">
                     <h2 class="text-center">Create an account</h2>
                     <h3 class="text-center">Sign up and begin your gaming journey!</h3>
-                    <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+                    <form action="/" method="post">
                         <div class="form-group">
                             <input type="text" class="form-control" name="user" id="user" placeholder="Username" required>
                             <div class="error-message" id="user-error"></div>
@@ -32,10 +32,7 @@
                     </form>        
                 </div>
                 <div class="terms">
-                    <p>Do you have an account already? <b><a href="
-                    <?php
-                    echo $_SERVER['PHP_SELF'] . '?login=true'                
-                    ?>">Jump in here!</a></b></p>
+                    <p>Do you have an account already? <b><a href="/?login=true">Jump in here!</a></b></p>
                 </div>
             </div>
         </div>
