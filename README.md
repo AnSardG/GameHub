@@ -6,6 +6,8 @@ and at first it will only be thought for mobile phone (it's not responsive at al
 Since I've got little time to develop this app there aren't a lot of functionalities and backend code can get real messy 
 sometimes :).
 
+# Docker setup
+
 ## Start docker
 
 docker-compose up -d
