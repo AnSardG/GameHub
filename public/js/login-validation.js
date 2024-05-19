@@ -31,7 +31,7 @@ $(document).ready(function() {
                 data: { valid: valid, formData: formData },
                 success: function(response) {
                     if(response.success == 'true') {
-                        window.location.href = '../public/index.php?login=true';   
+                        window.location.href = '/?logged=true';
                     }
                 },
                 error: function(xhr, status, error) {

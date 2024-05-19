@@ -83,3 +83,7 @@ footer {
   width: 25px;
   height: auto;
 }
+
+#loader-overlay {
+  z-index: 9999;
+}
