@@ -11,7 +11,7 @@
         PRIMARY KEY (id),
         UNIQUE(username)
     );
-gamer1gamer1
+
     /*
     CREATE TABLE IF NOT EXISTS games ( 
         id INT NOT NULL AUTO_INCREMENT,

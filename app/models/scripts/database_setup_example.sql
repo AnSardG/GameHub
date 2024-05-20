@@ -11,34 +11,6 @@
         PRIMARY KEY (id),
         UNIQUE(username)
     );
-gamer1gamer1
-    /*
-    CREATE TABLE IF NOT EXISTS games ( 
-        id INT NOT NULL AUTO_INCREMENT,
-        api_id INT,
-        title VARCHAR(255) NOT NULL,
-        corporation VARCHAR(255),
-        game_description TEXT,
-        favorite_votes INT,
-        PRIMARY KEY (id)
-    );
-
-
-    CREATE TABLE IF NOT EXISTS devices (
-        id INT NOT NULL AUTO_INCREMENT,
-        name VARCHAR(255) NOT NULL,
-        PRIMARY KEY (id)
-    );
-
-    CREATE TABLE IF NOT EXISTS game_devices (
-        game_id INT,
-        device_id INT,
-        FOREIGN KEY (game_id) REFERENCES games(id),
-        FOREIGN KEY (device_id) REFERENCES devices(id),
-        PRIMARY KEY (game_id, device_id)
-    );
-
-    */
 
     CREATE TABLE IF NOT EXISTS user_favorite_games (
         user_id INT,
