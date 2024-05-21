@@ -39,4 +39,4 @@
     </div>
 </div>
 
-<script src="./js/register-validation.js"></script>
+<script src="./public/js/register-validation.js"></script>

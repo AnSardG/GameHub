@@ -40,7 +40,7 @@ $(document).ready(function() {
         
         if(valid) {
             $.ajax({
-                url: '../app/views/register/validate.php',
+                url: './app/views/register/validate.php',
                 method: 'POST',
                 data: { valid: valid, formData: formData },
                 success: function(response) {

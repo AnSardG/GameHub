@@ -8,7 +8,7 @@ function fetchMoreGames() {
   loaderOverlay.classList.remove('d-none');
   loading = true;
   $.ajax({
-    url: '../app/views/general/fetch_games.php',
+    url: './app/views/general/fetch_games.php',
     method: 'POST',
     data: { page: page },
     success: function(response) {

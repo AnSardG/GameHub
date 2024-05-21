@@ -26,7 +26,7 @@ $(document).ready(function() {
         
         if(valid) {
             $.ajax({
-                url: '../app/views/login/validate.php',
+                url: './app/views/login/validate.php',
                 method: 'POST',
                 data: { valid: valid, formData: formData },
                 success: function(response) {

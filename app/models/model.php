@@ -1,6 +1,6 @@
 <?php
-require_once('../config/model_config.php');
-require_once('../app/models/database.php');
+require_once('./config/model_config.php');
+require_once('./app/models/database.php');
 
 function add_user($username, $email, $password) {
     $connection = start_connection(DB_HOST, DB_USER_ADMIN, DB_PASSWORD_ADMIN, DB_NAME);

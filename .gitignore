@@ -1,3 +1,5 @@
 app/models/scripts/database_setup.sql
 config/api_config.php
 .idea
+config/install_db_locally.php
+app/models/database.php

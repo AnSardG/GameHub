@@ -1,4 +1,4 @@
-<?php include '../app/views/game_details/fetch_details.php'; ?>
+<?php include './app/views/game_details/fetch_details.php'; ?>
 
 <?php if (!empty($gameDetails[0]['screenshots'])) : ?>
     <?php $screenshots = array_slice($gameDetails[0]['screenshots'], 0, 4); ?>
