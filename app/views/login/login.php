@@ -4,7 +4,7 @@
             <div class="col-md-8 col-lg-6">
                 <div class="login-form">
                     <h2 class="text-center">Login your account</h2>
-                    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+                    <form action="/" method="post">
                         <div class="form-group">
                             <input type="text" class="form-control" name="user" id="user" placeholder="Username" required>
                             <div class="error-message" id="user-error"></div>
@@ -24,11 +24,7 @@
                 </div>
                 <div class="register">
                     <p>You don't have an account?
-                        <b><a href="
-                        <?php                      
-                        echo $_SERVER['PHP_SELF'] . '?register=true';
-                        ?>
-                        ">Click here</a></b>
+                        <b><a href="/?register=true">Click here</a></b>
                     </p>
                 </div>
             </div>

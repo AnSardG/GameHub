@@ -1,6 +1,6 @@
 <?php
 try {        
-    $db = new PDO("mysql:host=localhost", "root");
+    $db = new PDO("mysql:host=mysql", "root", "root");
     // Configure error mode to throw exception instead of warnings
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

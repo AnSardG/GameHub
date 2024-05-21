@@ -3,9 +3,12 @@
 <?php if (!empty($gameDetails[0]['screenshots'])) : ?>
     <?php $screenshots = array_slice($gameDetails[0]['screenshots'], 0, 4); ?>
     <div id="carouselExampleIndicators" class="carousel slide mx-3" data-bs-ride="carousel">
-        <div class="carousel-indicators">
+        <div class="carousel-indicators game-details-carousel-indicators">
             <?php for ($i = 0; $i < sizeof($screenshots); $i++) : ?>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $i; ?>" class="<?php echo $i == 0 ? 'active' : ''; ?>" aria-current="true" aria-label="Slide <?php echo $i + 1; ?>"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $i; ?>"
+                    class="rounded-circle w-20 <?php echo $i == 0 ? 'active' : ''; ?>" aria-current="true"
+                    aria-label="Slide <?php echo $i + 1; ?>"
+                    style="width: 8px; height: 8px;"></button>
             <?php endfor; ?>
         </div>
         <div class="carousel-inner">
@@ -29,9 +32,22 @@
     </div>
 <?php endif; ?>
 
-<!-- <div class="mt-4">
-    <h2><?php echo $gameDetails['name']; ?></h2>
-    <p>Platforms: <?php echo implode(', ', $gameDetails['platforms']); ?></p>
-    <p>Developer: <?php echo $gameDetails['involved_companies'][0]['company']['name']; ?></p>
-    <p>Description: <?php echo $gameDetails['summary']; ?></p>
-</div> -->
+<?php
+$gameDetails = $gameDetails[0];
+
+$deviceNames = array();
+$devices = $gameDetails['platforms'];
+foreach ($devices as $device) {
+    $deviceNames[] = $device["name"];
+}
+
+$deviceNames = implode(", ", $deviceNames) . ".";
+$developer = $gameDetails['involved_companies'][0]['company']['name'];
+?>
+
+<div class="game-details-container container mt-4 px-3">
+    <h2 class="mt-4 game-details-title"><?php echo $gameDetails['name']; ?></h2>
+    <h3 class="mt-2 game-details-description"><?php echo $deviceNames; ?></h3>
+    <p class="mt-4 mb-2 game-details-developer"><?php echo $developer; ?></p>
+    <p class="game-details-description"><?php echo $gameDetails['summary']; ?></p>
+</div>

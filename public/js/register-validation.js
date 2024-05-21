@@ -45,7 +45,7 @@ $(document).ready(function() {
                 data: { valid: valid, formData: formData },
                 success: function(response) {
                     if(response.success == 'true') {
-                        window.location.href = '../public/index.php?register=true';   
+                        window.location.href = '/?registered=true';
                     }
                 },
                 error: function(xhr, status, error) {
