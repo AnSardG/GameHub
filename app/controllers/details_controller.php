@@ -5,6 +5,6 @@ $data = array();
 $data['title'] = $title['details'];
 $data['header'] = $header['details'];
 $data['body'] = $body['details'];
-$data['footer'] = "&copy; " . date('Y') . " GameHub. All rights reserved.";
+$data['footer'] = '<div class="details-footer">&copy; ' . date('Y') . ' Antonio Sard González. All rights reserved.</div>';
 $data['menu_bar'] = MENU_BAR;
 

@@ -16,7 +16,7 @@ $i = 0;
 foreach ($games as $game) {
   $platforms = isset($game['platforms']) ? implode(', ', array_column($game['platforms'], 'name')) : 'N/A';
   $image = str_replace("t_thumb", "t_cover_big", $game['cover']['url']);
-  $imageUrl = isset($game['cover']) ? 'https:' . $image : 'img/placeholder.jpg';
+  $imageUrl = isset($game['cover']) ? 'https:' . $image : './public/img/placeholder.jpg';
   if ($i == 0) {
     $game_row = '<div class="row">';
   }

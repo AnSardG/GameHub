@@ -48,7 +48,7 @@ if ((isset($_GET['login']) || !empty($_SESSION['login_failed']) || !empty($logge
 
 }
 
-$data['footer'] = "&copy; " . date('Y') . " GameHub. All rights reserved.";
+$data['footer'] = "&copy; " . date('Y') . " Antonio Sard González. All rights reserved.";
 $data['menu_bar'] = MENU_BAR;
 
 function output_data_to_js($user, $email, $pass, $pass_repeat) {

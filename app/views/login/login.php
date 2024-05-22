@@ -32,4 +32,4 @@
     </div>
 </div>
 
-<script src="./js/login-validation.js"></script>
+<script src="./public/js/login-validation.js"></script>
