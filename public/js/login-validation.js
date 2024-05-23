@@ -26,9 +26,9 @@ $(document).ready(function() {
         
         if(valid) {
             $.ajax({
-                url: './app/views/login/validate.php',
+                url: '/',
                 method: 'POST',
-                data: { valid: valid, formData: formData },
+                data: { valid: valid, formData: formData, "controller": 'login_validation' },
                 success: function(response) {
                     if(response.success == 'true') {
                         window.location.href = '/?logged=true';

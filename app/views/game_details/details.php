@@ -1,4 +1,4 @@
-<?php include './app/views/game_details/fetch_details.php'; ?>
+<?php include './app/controllers/fetch_details.php'; ?>
 
 <?php if (!empty($gameDetails[0]['screenshots'])) : ?>
     <?php $screenshots = array_slice($gameDetails[0]['screenshots'], 0, 4); ?>
@@ -51,3 +51,25 @@ $developer = $gameDetails['involved_companies'][0]['company']['name'];
     <p class="mt-4 mb-2 game-details-developer"><?php echo $developer; ?></p>
     <p class="game-details-description"><?php echo $gameDetails['summary']; ?></p>
 </div>
+
+<?php
+    // Check in database if game is already on favorite
+    $game = $_GET['game'];
+    $username = $_SESSION["login_data"]["user"];
+    $gameInFavorites = check_favorite($username, intval($game));
+?>
+
+<div class="container mt-5">
+    <button id="add-to-favorites" class="btn favorites-btn btn-block w-100 p-3 <?php echo $gameInFavorites ? 'd-none' : '' ?>"
+            data-game-id="<?php echo $_GET['game']?>"
+            data-username="<?php echo $_SESSION["login_data"]["user"]?>">
+        Add to favorites
+    </button>
+    <button id="remove-from-favorites" class="btn remove-favorites-btn btn-block w-100 p-3 <?php echo !$gameInFavorites ? 'd-none' : '' ?>"
+            data-game-id="<?php echo $_GET['game']?>"
+            data-username="<?php echo $_SESSION["login_data"]["user"]?>">
+        Remove from favorites
+    </button>
+</div>
+
+<script src="./public/js/favorite-games.js"></script>

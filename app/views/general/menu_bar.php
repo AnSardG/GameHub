@@ -5,7 +5,9 @@ $current_page = $_SESSION['current_page'] ?? '';
 <?php if($current_page != 'login') : ?>
 
 <div class="menu-bar">
-    <input id="search-input" class="search-bar w-100 d-none position-absolute z-3">
+    <input id="search-input" class="search-bar w-100 d-none position-absolute z-3"
+           style=""
+    >
     <div class="container">
         <div class="row">
             <div class="col-3">
