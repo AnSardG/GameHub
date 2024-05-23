@@ -156,6 +156,21 @@ input[type="color"]:focus,
   color: #000000;
 }
 
+.favorites-btn:hover {
+  background-color: #2e85a1;
+  color: #000000;
+}
+
+.remove-favorites-btn {
+  background-color: #ed0000;
+  color: #f3f3f3;
+}
+
+.remove-favorites-btn:hover {
+  background-color: #a80e0e;
+  color: #f3f3f3;
+}
+
 .details-footer {
   margin-top: 10%;
   text-align: center;

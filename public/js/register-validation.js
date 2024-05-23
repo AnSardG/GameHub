@@ -40,9 +40,9 @@ $(document).ready(function() {
         
         if(valid) {
             $.ajax({
-                url: './app/views/register/validate.php',
+                url: '/',
                 method: 'POST',
-                data: { valid: valid, formData: formData },
+                data: { valid: valid, formData: formData, "controller": 'register_validation' },
                 success: function(response) {
                     if(response.success == 'true') {
                         window.location.href = '/?registered=true';

@@ -4,6 +4,21 @@ require('./config/api_config.php');
 require('./config/view_config.php');
 session_start();
 
+if (strtolower($_SERVER['HTTP_X_REQUESTED_WITH'] ?? '') === 'xmlhttprequest') {
+    if (!empty($_POST['controller'])) {
+
+        $controllerFile = './app/controllers/ajax/' . $_POST['controller'] . '.php';
+
+        if(file_exists($controllerFile)) {
+            require_once($controllerFile);
+            return;
+        } else {
+            die('forbidden');
+        }
+
+    }
+}
+
 if (!empty($_SESSION['login_data'])) {
 
     $_SESSION['login'] = check_login($_SESSION['login_data']['user'], $_SESSION['login_data']['pass']);

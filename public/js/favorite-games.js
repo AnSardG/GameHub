@@ -1,15 +1,43 @@
 $(document).ready(function () {
    $('#add-to-favorites').click(function () {
-      var gameId = $(this).data('game-id');
+      let gameId = $(this).data('game-id');
+      let user = $(this).data('username');
 
       $.ajax({
-         url: './app/views/game_details/fetch_favorites.php',
-         type: 'POST',
+         url: '/',
+         method: 'POST',
          data: {
-            game_id: gameId
+            "game_id": gameId,
+            "username": user,
+            "controller": 'fetch_favorites'
          },
          success: function(response) {
-            alert('success');
+            console.log(response);
+            $('#add-to-favorites').addClass('d-none');
+            $('#remove-from-favorites').removeClass('d-none');
+         },
+         error: function(xhr, status, error) {
+            console.error(xhr);
+         }
+      });
+   });
+
+   $('#remove-from-favorites').click(function () {
+      let gameId = $(this).data('game-id');
+      let user = $(this).data('username');
+
+      $.ajax({
+         url: '/',
+         method: 'POST',
+         data: {
+            "game_id": gameId,
+            "username": user,
+            "controller": 'fetch_favorites'
+         },
+         success: function(response) {
+            console.log(response);
+            $('#remove-from-favorites').addClass('d-none');
+            $('#add-to-favorites').removeClass('d-none');
          },
          error: function(xhr, status, error) {
             console.error(xhr);

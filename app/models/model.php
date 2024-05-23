@@ -33,7 +33,9 @@ function check_login($username, $password) {
 function check_favorite($username, $game_id) {
     $exists = false;
     $connection = start_connection(DB_HOST, DB_USER_ADMIN, DB_PASSWORD_ADMIN, DB_NAME);
-    $result = db_query("INSERT IGNORE INTO user_favorite_games (username, game_id) VALUES ('$username', '$game_id');",
+    $result = db_query("SELECT * FROM user_favorite_games 
+                              WHERE username = '$username' 
+                              AND game_id = $game_id LIMIT 1;",
                         $connection);
 
     if(db_get_result($result) != null) {
@@ -52,7 +54,6 @@ function add_favorite_game($username, $game_id) {
 }
 
 function remove_favorite_game($username, $game_id) {
-    die();
     $connection = start_connection(DB_HOST, DB_USER_ADMIN, DB_PASSWORD_ADMIN, DB_NAME);
     db_query("DELETE IGNORE FROM user_favorite_games WHERE username = '$username' AND game_id = $game_id;",
         $connection);
