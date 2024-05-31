@@ -35,6 +35,10 @@ if (isset($_GET['game'])) {
     $_SESSION['login_data'] = null;
     require_once('./app/controllers/login_controller.php');
 
+} else if (!empty($_GET['favorites'])) {
+
+    require_once('./app/controllers/favorites_controller.php');
+
 } else if (!empty($_SESSION['login'])) {
 
     require_once('./app/controllers/home_controller.php');

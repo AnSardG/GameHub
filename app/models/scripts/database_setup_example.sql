@@ -15,8 +15,7 @@
     CREATE TABLE IF NOT EXISTS user_favorite_games (
         username VARCHAR(255),
         game_id INT,
-        FOREIGN KEY (username) REFERENCES users(username),
-        PRIMARY KEY (username)
+        FOREIGN KEY (username) REFERENCES users(username)
     );
 
 -- Create admin user

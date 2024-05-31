@@ -18,5 +18,5 @@ function db_query($query, $connection) {
 }
 
 function db_get_result($result) {
-    return $result->fetch(PDO::FETCH_ASSOC);
+    return $result->fetchAll(PDO::FETCH_ASSOC);
 }
