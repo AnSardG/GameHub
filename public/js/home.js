@@ -1,6 +1,9 @@
 var loading = false;
 var page = 2;
 
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const searchParam = urlParams.get('search');
 
 // Function to fetch more game data from PHP script
 function fetchMoreGames() {
@@ -27,10 +30,11 @@ function fetchMoreGames() {
 }
 
   // Event listener for scrolling
-  $(window).scroll(function() {
-    if ($(window).scrollTop() + $(window).height() >= $(document).height() - 100 && !loading) {
-      fetchMoreGames();
-    }
-  });
-
+  if(!searchParam) {
+    $(window).scroll(function() {
+      if ($(window).scrollTop() + $(window).height() >= $(document).height() - 100 && !loading) {
+        fetchMoreGames();
+      }
+    });
+  }  
   

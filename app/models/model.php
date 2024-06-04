@@ -37,7 +37,6 @@ function check_favorite($username, $game_id) {
                               WHERE username = '$username' 
                               AND game_id = $game_id LIMIT 1;",
                         $connection);
-
     if(db_get_result($result) != null) {
         $exists = true;
     }
@@ -58,4 +57,12 @@ function remove_favorite_game($username, $game_id) {
     db_query("DELETE IGNORE FROM user_favorite_games WHERE username = '$username' AND game_id = $game_id;",
         $connection);
     close_connection($connection);
+}
+
+function get_user_favorite_games($username) {
+    $connection = start_connection(DB_HOST, DB_USER_ADMIN, DB_PASSWORD_ADMIN, DB_NAME);
+    $result = db_query("SELECT game_id FROM user_favorite_games WHERE username = '$username';", $connection);
+    $game_ids = db_get_result($result);
+    close_connection($connection);
+    return $game_ids;
 }

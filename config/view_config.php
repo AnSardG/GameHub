@@ -5,6 +5,7 @@ $title = array(
     'login' => "Login - GameHub",
     'register' => "Register - GameHub",
     'details' => "Game Details - GameHub",
+    'favorites' => "Favorite Games - GameHub",
 );
 
 // HEADERS
@@ -21,6 +22,7 @@ $body = array(
     'login' => "./app/views/login/login.php",
     'register' => "./app/views/register/register.php",
     'details' => "./app/views/game_details/details.php",
+    'favorites' => "./app/views/favorite_games/favorites.php",
 );
 
 const MENU_BAR = "./app/views/general/menu_bar.php";

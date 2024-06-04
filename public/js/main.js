@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('search-input');
     const loaderOverlay = document.getElementById('loader-overlay');
     const games = document.getElementsByClassName('game-card');
+    const favoriteIcon = document.getElementById('favorite-icon');
+    const homeIcon = document.getElementById('home-icon');
 
     searchIcon.addEventListener('click', function() {
         searchInput.classList.toggle('d-none');
@@ -20,6 +22,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             }
         }
+    });
+
+    favoriteIcon.addEventListener('click', function(event) {    
+        loaderOverlay.classList.remove('d-none');
+    });
+
+    homeIcon.addEventListener('click', function(event) {    
+        loaderOverlay.classList.remove('d-none');
     });
 
     searchInput.addEventListener('keypress', function(event) {
